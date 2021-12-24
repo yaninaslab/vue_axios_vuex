@@ -1,12 +1,18 @@
 <template>
     <div>
-<button>Normal Joke</button>
+<button @click="change_mode">Normal Joke</button>
     </div>
 </template>
 
 <script>
     export default {
-        name: "normal-joke"
+        name: "normal-joke", 
+        methods: {
+            change_mode() {
+                this.$store.dispatch('set_normal');
+            }
+        },
+        
     }
 </script>
 

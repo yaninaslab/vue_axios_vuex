@@ -2,7 +2,7 @@
   <div id="app">
     
     <joke-button></joke-button>
-
+<h2>{{ joke }}</h2>
     <normal-joke></normal-joke>
     <snake-joke></snake-joke>
     <loud-joke></loud-joke>
@@ -22,7 +22,21 @@ export default {
     NormalJoke,
     SnakeJoke,
     LoudJoke,
-  }
+  },
+  computed: {
+    joke() {
+      var text = this.$store.state.joke; 
+      var mode = this.$store.state.mode;
+    
+      if(mode === "snake") {
+        return text.replace(/ /g,"_");
+      }else if(mode === "uppercase") {
+        return text.toUpperCase();
+      }else {
+        return text
+      }
+    }
+  },
 }
 </script>
 

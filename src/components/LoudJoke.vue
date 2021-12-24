@@ -1,12 +1,17 @@
 <template>
     <div>
-<button>LOUD JOKE</button>
+<button @click="change_mode">LOUD JOKE</button>
     </div>
 </template>
 
 <script>
     export default {
-        name: "loud-joke"
+        name: "loud-joke",
+        methods: {
+            change_mode() {
+                this.$store.dispatch('set_uppermode');
+            }
+        },
     }
 </script>
 
