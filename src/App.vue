@@ -2,10 +2,11 @@
   <div id="app">
     
     <joke-button></joke-button>
-<h2>{{ joke }}</h2>
+
     <normal-joke></normal-joke>
     <snake-joke></snake-joke>
     <loud-joke></loud-joke>
+    <h2>{{ joke }}</h2>
   </div>
 </template>
 
